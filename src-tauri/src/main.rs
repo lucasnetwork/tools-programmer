@@ -1,5 +1,5 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+#![cfg_attr(not(debug_assertions), windows_subsystem = "linux")]
 use rand::Rng;
 
 fn dig(n1: &str, n2: &str, n3: &str, n4: Option<&str>) -> u8 {
@@ -15,19 +15,19 @@ fn dig(n1: &str, n2: &str, n3: &str, n4: Option<&str>) -> u8 {
     }
     let nums_array: Vec<&str> = nums.split("").filter(|&x| !x.is_empty()).collect();
 
-    for j in nums_array.into_iter() {
+    for number in nums_array.into_iter() {
         if i >= 2 {
-            let value= j.parse::<u16>().unwrap();
+            let value= number.parse::<u16>().unwrap();
             x += value * i;
         }
         i -= 1;
     }
 
-    let y: u8 = (x % 11).try_into().unwrap();
-    if y < 2 {
+    let rest: u8 = (x % 11).try_into().unwrap();
+    if rest < 2 {
         0
     } else {
-        11 - y
+        11 - rest
     }
 }
 
@@ -43,15 +43,15 @@ fn generate_cpf() -> String {
         num2.to_string().as_str(),
         num3.to_string().as_str(),
         None,
-    ); //agora só uma função dig
+    ); 
     let dig2 = dig(
         num1.to_string().as_str(),
         num2.to_string().as_str(),
         num3.to_string().as_str(),
         Some(dig1.to_string().as_str()),
-    ); //mesma função dig aqui
+    );
 
-    //aqui com interpolação de strings fica bem mais legivel
+    
     format!("{}.{}.{}-{}{}", num1, num2, num3, dig1, dig2)
 }
 
