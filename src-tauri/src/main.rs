@@ -35,9 +35,9 @@ fn dig(n1: &str, n2: &str, n3: &str, n4: Option<&str>) -> u8 {
 #[tauri::command]
 fn generate_cpf() -> String {
     let mut rng = rand::thread_rng();
-    let num1: u16 = rng.gen_range(0..999) ;//aleatorio já devolve string, logo não precisa de toString
-    let num2: u16 = rng.gen_range(0..999);
-    let num3: u16 = rng.gen_range(0..999);
+    let num1: u16 = rng.gen_range(100..999) ;//aleatorio já devolve string, logo não precisa de toString
+    let num2: u16 = rng.gen_range(100..999);
+    let num3: u16 = rng.gen_range(100..999);
     let dig1 = dig(
         num1.to_string().as_str(),
         num2.to_string().as_str(),
