@@ -1,0 +1,17 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["standard-with-typescript","plugin:solid/typescript","prettier"],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": ["prettier","solid"],
+    "rules": {
+        "prettier/prettier":["warn",{"endOfLine":"auto"}],
+        "@typescript-eslint/explicit-function-return-type":"off",
+        "@typescript-eslint/no-misused-promises":"off"
+    }
+}
