@@ -1,14 +1,15 @@
-import DefaultLayout from "../layout/default";
-import { Router, Route,  } from "@solidjs/router";
-import GenerateCPF from "../pages/GenerateCPF";
-const Routers=
-  () => (
-    <Router>
-        <Route path="/" component={DefaultLayout} >
-
-        <Route path="/" component={GenerateCPF} />
-        </Route>
-    </Router>
-
-  )
-  export default Routers
+import DefaultLayout from '../layout/default';
+import { Router, Route } from '@solidjs/router';
+import GenerateCPF from '../pages/GenerateCPF';
+import GenerateCNPJ from '../pages/GenerateCNPJ';
+import Init from '../pages/Init';
+const Routers = () => (
+	<Router>
+		<Route path="/" component={DefaultLayout}>
+			<Route path="/" component={Init} />
+			<Route path="/cpf" component={GenerateCPF} />
+			<Route path="/cnpj" component={GenerateCNPJ} />
+		</Route>
+	</Router>
+);
+export default Routers;
