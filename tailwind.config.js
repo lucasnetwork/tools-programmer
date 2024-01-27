@@ -10,6 +10,7 @@ export default {
         darkI: "rgba(255, 255, 255, 0.05)",
         darkII: "rgba(255, 255, 255, 0.07)",
         darkIII: "rgba(255, 255, 255, 0.09)",
+        primary:"#3700B3"
       },
     },
   },
