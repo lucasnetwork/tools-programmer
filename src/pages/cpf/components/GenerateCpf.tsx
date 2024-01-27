@@ -1,6 +1,6 @@
 import { invoke } from '@tauri-apps/api';
 import { createSignal } from 'solid-js';
-import Button from '../components/Button';
+import Button from '../../../components/Button';
 import { writeText } from '@tauri-apps/api/clipboard';
 import toast from 'solid-toast';
 function GenerateCPF() {
@@ -14,7 +14,7 @@ function GenerateCPF() {
 		toast.success('Cpf copiado');
 	};
 	return (
-		<div class="w-full flex-1 justify-between flex flex-col ">
+		<div class=" flex flex-col ">
 			<h1 class="text-white text-6xl mt-5 text-center">Gerar Cpf</h1>
 			<div class="flex-1 flex flex-col items-center justify-center">
 				<p class="text-white text-6xl text-center border-b border-b-red-700">
@@ -25,7 +25,6 @@ function GenerateCPF() {
 					<Button onClick={copyCpf}>Copiar</Button>
 				</div>
 			</div>
-			<div class="flex-1" />
 		</div>
 	);
 }
