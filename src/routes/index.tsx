@@ -1,7 +1,7 @@
 import DefaultLayout from '../layout/default';
 import { Router, Route } from '@solidjs/router';
 import GenerateCPF from '../pages/cpf';
-import GenerateCNPJ from '../pages/GenerateCNPJ';
+import GenerateCNPJ from '../pages/cnpj/';
 import Init from '../pages/Init';
 const Routers = () => (
 	<Router>
