@@ -22,6 +22,12 @@ function DefaultLayout(props) {
 					>
 						cnpj
 					</A>
+					<A
+						href="/convert-numbers"
+						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('cnpj') ? 'bg-darkIII' : ''}`}
+					>
+						Conversor de números
+					</A>
 				</div>
 			</aside>
 			<div class="flex-1 flex items-center flex-col gap-y-4 self-stretch  ">

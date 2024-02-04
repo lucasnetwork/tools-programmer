@@ -1,6 +1,5 @@
 import { invoke } from '@tauri-apps/api';
 import { createEffect, createSignal } from 'solid-js';
-import Button from '../../../components/Button';
 import { writeText } from '@tauri-apps/api/clipboard';
 import { AiOutlineReload } from 'solid-icons/ai';
 import toast from 'solid-toast';
@@ -25,7 +24,7 @@ function GenerateCNPJ() {
 	});
 	return (
 		<div class=" flex flex-col ">
-			<h1 class="text-white text-5xl mt-5 text-center">Gerar cnpj</h1>
+			<h1 class="text-white text-5xl mt-5 ">Gerar cnpj</h1>
 			<div class="flex-1 flex flex-col mt-4">
 				<div class="gap-x-8 flex mb-4 ">
 					<button type="button" onClick={getCNPJ}>

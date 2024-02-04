@@ -3,7 +3,7 @@ import ValidateCpf from './components/ValidateCpf';
 
 function Cpf() {
 	return (
-		<div class="w-full flex-1 flex flex-col ">
+		<div class="w-full flex-1 flex flex-col px-4">
 			<h1 class="text-white text-6xl mt-5 text-center">Cpf</h1>
 			<GenerateCPF />
 			<ValidateCpf />

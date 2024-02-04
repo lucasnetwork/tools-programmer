@@ -23,20 +23,16 @@ pub fn validate_cpf(value_cpf:String)-> Result<bool,bool>{
         return Err(false)
     }
     for n in 1..=9{
-        println!("{}",n);
       sum_total += cpf_only_numbers_string[n-1..n].parse::<u16>().unwrap() * (11 - n) as u16;
     }
-    println!("oioi {}",sum_total);
 
     rest = (sum_total * 10) % 11;
-    println!("rest {}",rest);
   
     if rest == 10 || rest == 11 {
 
         rest = 0;
     }
     if rest != cpf_only_numbers_string[9..10].parse::<u16>().unwrap() {
-        println!("oioi");
 
         return Err(false)
     }
@@ -51,9 +47,7 @@ pub fn validate_cpf(value_cpf:String)-> Result<bool,bool>{
         rest = 0;
     }
     if rest != cpf_only_numbers_string[10..11].parse::<u16>().unwrap() {
-        println!("oio2i");
         return Err(false)
     }
-    println!("oidsa90");
     Ok(true)
 }

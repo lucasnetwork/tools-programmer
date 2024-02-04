@@ -40,7 +40,7 @@ pub fn validate_cnpj(value_cnpj:String)-> Result<bool,bool>{
     }
     let mut condition = 0;
     n = n%11;
-    if (n>= 2){
+    if n>= 2 {
         condition =11-n;
     }
     if cpf_only_numbers_string.chars().nth(13).unwrap().to_string().parse::<u32>().unwrap() !=condition{
