@@ -28,6 +28,12 @@ function DefaultLayout(props) {
 					>
 						Conversor de números
 					</A>
+					<A
+						href="/generate-rg"
+						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('cnpj') ? 'bg-darkIII' : ''}`}
+					>
+						Gerar rg
+					</A>
 				</div>
 			</aside>
 			<div class="flex-1 flex items-center flex-col gap-y-4 self-stretch  ">
