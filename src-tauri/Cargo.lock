@@ -3227,6 +3227,7 @@ dependencies = [
 name = "tools-programmer"
 version = "0.0.0"
 dependencies = [
+ "base64 0.21.7",
  "image",
  "rand 0.8.5",
  "regex",
@@ -3234,6 +3235,7 @@ dependencies = [
  "serde_json",
  "tauri",
  "tauri-build",
+ "tempfile",
 ]
 
 [[package]]
