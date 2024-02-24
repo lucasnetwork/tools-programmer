@@ -1,19 +1,22 @@
 import { invoke } from '@tauri-apps/api';
-import { createEffect, createSignal } from 'solid-js';
+import { createSignal } from 'solid-js';
 
 function GenerateRG() {
 	const [image, setImage] = createSignal('');
-	createEffect(() => {
-		async function callback() {
-			const response = await invoke<string>('generate_rg');
-			setImage(`data:image/png;base64, ${response}`);
-		}
-		void callback();
-	});
+	async function generateRG() {
+		const response = await invoke<string>('generate_rg');
+		setImage(`data:image/png;base64, ${response}`);
+	}
 
 	return (
 		<div class=" flex flex-col ">
-			<img src={image()} />
+			<h1 class="text-white text-6xl mt-5 text-center">Gerar rg</h1>
+			<div class="mb-4">
+				<button type="button" class="bg-white px-4" onClick={generateRG}>
+					Gerar RG
+				</button>
+			</div>
+			<img src={image()} class="w-60" />
 		</div>
 	);
 }
