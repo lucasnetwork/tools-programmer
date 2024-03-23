@@ -34,6 +34,12 @@ function DefaultLayout(props) {
 					>
 						Gerar rg
 					</A>
+					<A
+						href="/generate-uuids"
+						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('generate-rg') ? 'bg-darkIII' : ''}`}
+					>
+						Gerar UUIDS
+					</A>
 				</div>
 			</aside>
 			<div class="flex-1 flex items-center flex-col gap-y-4 self-stretch  ">
