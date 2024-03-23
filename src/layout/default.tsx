@@ -24,13 +24,13 @@ function DefaultLayout(props) {
 					</A>
 					<A
 						href="/convert-numbers"
-						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('cnpj') ? 'bg-darkIII' : ''}`}
+						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('convert-numbers') ? 'bg-darkIII' : ''}`}
 					>
 						Conversor de números
 					</A>
 					<A
 						href="/generate-rg"
-						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('cnpj') ? 'bg-darkIII' : ''}`}
+						class={`text-white p-4 hover:bg-darkII ${location.pathname.includes('generate-rg') ? 'bg-darkIII' : ''}`}
 					>
 						Gerar rg
 					</A>

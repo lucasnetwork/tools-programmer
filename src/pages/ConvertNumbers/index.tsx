@@ -36,8 +36,9 @@ function ConvertNumbers() {
 			<h1 class="text-white text-6xl mt-5 text-center mb-4">
 				Conversor de Números
 			</h1>
+			<p class="text-white text-lg">Adicione o número</p>
 			<TextArea value={text()} onInput={(e) => setText(e.target.value)} />
-			<div class="mt-10">
+			<div class="mt-10 flex flex-col gap-y-4 gap-x-4">
 				<p class="text-white">Binario:{result().binary}</p>
 				<p class="text-white">Octal:{result().octal}</p>
 				<p class="text-white">Hexadecimal:{result().hex}</p>
